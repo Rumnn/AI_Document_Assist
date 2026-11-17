@@ -1,0 +1,160 @@
+# ==============================================================================
+# AI Document Assistant – Comprehensive .gitignore
+# Prevents leaking credentials, secrets, local data, models, and build artifacts.
+# ==============================================================================
+
+# ── 1. Secrets & Environment Variables (CRITICAL) ────────────────────────────
+.env
+.env.*
+*.env
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+# Explicitly allow the example template:
+!.env.example
+!.env.*.example
+
+# Private keys, certificates, credentials
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+*.pkcs12
+id_rsa*
+id_ed25519*
+*credentials*.json
+*service-account*.json
+client_secret*.json
+
+# ── 2. Local Storage, Uploads & Persistent Volumes ───────────────────────────
+# User-uploaded files & document storage
+uploads/
+storage/
+data/
+volumes/
+minio_data/
+postgres_data/
+qdrant_data/
+redis_data/
+*.db
+*.sqlite
+*.sqlite3
+
+# ── 3. AI & Embedding Models (Large Files) ───────────────────────────────────
+models/
+weights/
+checkpoints/
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors
+.cache/
+.huggingface/
+nltk_data/
+
+# ── 4. Python & Virtual Environments ─────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Packaging & Distribution
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing & Linting
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+nosetests.xml
+.tox/
+.nox/
+
+# Celery
+celerybeat-schedule*
+celerybeat.pid
+
+# ── 5. Node.js & Next.js Frontend ────────────────────────────────────────────
+node_modules/
+.pnpm-store/
+.npm/
+
+# Next.js build output
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+
+# Frontend test coverage
+coverage/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# ── 6. Logs & Debug ───────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+
+# ── 7. Operating System & IDE Files ───────────────────────────────────────────
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editors
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+
+# VS Code (ignore user settings, keep shared extensions/tasks if any)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

@@ -1,0 +1,16 @@
+allowBuilds:
+  canvas: true
+  esbuild: true
+  sharp: true
+  "@playwright/test": true
+  "@next/swc-win32-x64-msvc": true
+  "@next/swc-linux-x64-gnu": true
+  "@next/swc-linux-x64-musl": true
+
+supportedArchitectures:
+  os:
+    - current
+    - linux
+  cpu:
+    - x64
+    - arm64
