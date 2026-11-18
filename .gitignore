@@ -11,7 +11,7 @@
 *.env.development.local
 *.env.test.local
 *.env.production.local
-# Explicitly allow the example template:
+# Explicitly allow example templates:
 !.env.example
 !.env.*.example
 
@@ -30,23 +30,24 @@ id_ed25519*
 client_secret*.json
 
 # ── 2. Local Storage, Uploads & Persistent Volumes ───────────────────────────
-# User-uploaded files & document storage
-uploads/
-storage/
-data/
-volumes/
-minio_data/
-postgres_data/
-qdrant_data/
-redis_data/
+# User-uploaded files & persistent database volumes
+/uploads/
+/storage/
+/data/
+/volumes/
+/minio_data/
+/postgres_data/
+/qdrant_data/
+/redis_data/
 *.db
 *.sqlite
 *.sqlite3
 
-# ── 3. AI & Embedding Models (Large Files) ───────────────────────────────────
-models/
-weights/
-checkpoints/
+# ── 3. AI & Embedding Models (Weights & Large Files) ─────────────────────────
+# Only ignore model weight folders, NOT backend python code models
+/models/
+/weights/
+/checkpoints/
 *.bin
 *.pt
 *.pth
@@ -55,6 +56,10 @@ checkpoints/
 .cache/
 .huggingface/
 nltk_data/
+
+# Whitelist Python code models directory (Critical: backend/app/models)
+!backend/app/models/
+!backend/app/models/**
 
 # ── 4. Python & Virtual Environments ─────────────────────────────────────────
 __pycache__/
@@ -106,18 +111,24 @@ node_modules/
 .pnpm-store/
 .npm/
 
-# Next.js build output
+# Next.js build output & caches
 .next/
 out/
 .turbo/
 *.tsbuildinfo
 
-# Frontend test coverage
+# Frontend test coverage & reports
 coverage/
 test-results/
 playwright-report/
 blob-report/
 playwright/.cache/
+
+# Test scripts & visual verification scratch files
+test-*.mjs
+test-*.js
+shot-*.png
+shot-*.jpg
 
 # ── 6. Logs & Debug ───────────────────────────────────────────────────────────
 *.log
@@ -158,3 +169,8 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# AI Assistants & Local Tools
+.gemini/
+.claude/
+.cursor/

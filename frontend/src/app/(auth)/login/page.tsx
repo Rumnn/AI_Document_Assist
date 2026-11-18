@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import type { Route } from "next";
 import toast from "react-hot-toast";
 import { authApi } from "@/lib/api/auth";
 import { useAuthStore } from "@/lib/stores/auth-store";
@@ -22,7 +23,7 @@ export default function LoginPage() {
       const user = await authApi.me();
       setUser(user);
       toast.success("Welcome back!");
-      router.push("/documents");
+      router.push("/documents" as Route);
     } catch (err: unknown) {
       const msg = (err as { response?: { data?: { detail?: string } } })
         ?.response?.data?.detail ?? "Login failed";

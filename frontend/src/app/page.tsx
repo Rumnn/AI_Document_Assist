@@ -13,11 +13,11 @@ export default function HomePage() {
           Your intelligent knowledge retrieval platform. Upload documents, ask questions, get answers with citations.
         </p>
         <div className="flex gap-4 justify-center">
-          <a href="/login" className="px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
-            Get Started
+          <a href="/dashboard" className="px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-sm">
+            Enter Dashboard
           </a>
-          <a href="/register" className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors">
-            Create Account
+          <a href="/login" className="px-6 py-3 bg-white border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors shadow-xs">
+            Sign In
           </a>
         </div>
       </div>

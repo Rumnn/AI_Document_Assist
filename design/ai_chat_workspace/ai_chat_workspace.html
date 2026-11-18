@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#005236", "tertiary-container": "#006e4b", "surface-variant": "#d3e4fe", "outline": "#777587", "surface-tint": "#4d44e3", "on-secondary-container": "#5c647a", "surface-container-highest": "#d3e4fe", "on-primary-fixed-variant": "#3323cc", "background": "#f8f9ff", "surface-container": "#e5eeff", "on-secondary-fixed": "#131b2e", "primary-container": "#4f46e5", "on-tertiary": "#ffffff", "error": "#ba1a1a", "surface-container-lowest": "#ffffff", "primary-fixed": "#e2dfff", "inverse-on-surface": "#eaf1ff", "surface-container-high": "#dce9ff", "secondary-fixed": "#dae2fd", "on-background": "#0b1c30", "on-secondary": "#ffffff", "secondary": "#565e74", "surface-dim": "#cbdbf5", "on-surface": "#0b1c30", "on-tertiary-container": "#67f4b7", "tertiary-fixed": "#6ffbbe", "on-primary-container": "#dad7ff", "secondary-fixed-dim": "#bec6e0", "tertiary-fixed-dim": "#4edea3", "on-secondary-fixed-variant": "#3f465c", "on-error": "#ffffff", "on-primary": "#ffffff", "inverse-primary": "#c3c0ff", "error-container": "#ffdad6", "primary": "#3525cd", "tertiary": "#005338", "on-tertiary-fixed": "#002113", "surface-bright": "#f8f9ff", "on-primary-fixed": "#0f0069", "inverse-surface": "#213145", "surface": "#f8f9ff", "on-error-container": "#93000a", "secondary-container": "#dae2fd", "primary-fixed-dim": "#c3c0ff", "on-surface-variant": "#464555", "surface-container-low": "#eff4ff", "outline-variant": "#c7c4d8" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "0.75rem", "margin-desktop": "2rem", "gutter-desktop": "1.5rem", "space-xs": "0.25rem", "space-xl": "1.5rem", "gutter": "1rem", "space-sm": "0.5rem", "margin-tablet": "1.5rem", "space-lg": "1rem", "margin": "1rem" }, "fontFamily": { "body-md": [ "Inter" ], "headline-lg": [ "Inter" ], "headline-sm": [ "Inter" ], "headline-xl-mobile": [ "Inter" ], "headline-xl": [ "Inter" ], "body-lg": [ "Inter" ], "label-sm": [ "Inter" ], "label-md": [ "Inter" ], "code-sm": [ "JetBrains Mono" ], "body-sm": [ "Inter" ], "headline-md": [ "Inter" ] }, "fontSize": { "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "headline-lg": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-sm": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "headline-xl-mobile": [ "26px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-xl": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "code-sm": [ "12px", { "lineHeight": "16px", "fontWeight": "400" } ], "body-sm": [ "13px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-md": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col flex-1 min-h-0"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><img alt="DocuMind AI Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/ALJJyrArFNjKEVbFNLQ1sXyFrYYYSp3VnmHkl4ac1-lv-YTGOud-YjZjGAw9hGYhHhY0P1MEwqutcdSms8sDjnTHeyI7Avf-STR8mMC-Csvz1G-rXjk1OfxhJAjYbhHewXh1kgFDq8HbTRJ9-w4BQA760Ztp1MdaC0IQWLMDc6akd1slwgN6slOCreVcR03KQMyw871a1PHUnPUmNtsRAGIsek8CT3It67y8ZoMpRDqtDg5X"/><div class="flex items-center gap-space-xs truncate"><span class="font-headline-sm text-headline-sm text-on-surface truncate">DocuMind</span><span class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm uppercase tracking-wider">PRO</span></div></div></div><div class="px-space-md py-space-xs"><button class="w-full flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors" type="button"><div class="flex items-center gap-space-sm text-left truncate"><div class="w-7 h-7 rounded-lg bg-primary-container text-on-primary flex items-center justify-center font-headline-sm text-headline-sm flex-shrink-0">A</div><div class="truncate"><div class="font-label-md text-label-md text-on-surface font-semibold truncate">Acme Corp Labs</div><div class="font-label-sm text-label-sm text-on-surface-variant">14 team members</div></div></div><span class="material-symbols-outlined text-outline text-lg">unfold_more</span></button></div><nav class="flex-1 px-space-md py-space-sm space-y-0.5 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center justify-between px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-sm text-body-sm">Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="documents" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">description</span><span class="font-body-sm text-body-sm">Documents</span></div><span class="px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">24</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-2 rounded-lg transition-all bg-primary-container text-on-primary font-semibold" data-path="ai-chat" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">auto_awesome</span><span class="font-body-sm text-body-sm">AI Chat</span></div><span class="px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">New</span></a><a class="flex items-center justify-between px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="chat-history" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">forum</span><span class="font-body-sm text-body-sm">Chat History</span></div></a><a class="flex items-center justify-between px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="shared-with-me" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">group</span><span class="font-body-sm text-body-sm">Shared with me</span></div></a><a class="flex items-center justify-between px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="workspace" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">apartment</span><span class="font-body-sm text-body-sm">Workspace</span></div></a><div class="pt-space-sm pb-space-xs"><span class="px-space-md font-label-sm text-label-sm text-outline uppercase tracking-wider">System</span></div><a class="flex items-center justify-between px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="admin-console" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">security</span><span class="font-body-sm text-body-sm">Admin Console</span></div></a><a class="flex items-center justify-between px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-body-sm text-body-sm">Settings</span></div></a></nav></div><div class="p-space-md bg-surface-container-lowest flex flex-col gap-space-sm"><div class="p-space-sm rounded-lg bg-surface-container-low"><div class="flex items-center justify-between mb-1.5"><span class="font-label-sm text-label-sm text-on-surface-variant">Storage</span><span class="font-label-sm text-label-sm text-on-surface font-semibold">4.2 GB / 10 GB</span></div><div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden"><div class="h-full bg-primary rounded-full" style="width: 42%;"></div></div><div class="mt-1 text-right"><span class="font-label-sm text-label-sm text-outline">42% used</span></div></div><div class="flex items-center justify-between p-space-xs rounded-lg hover:bg-surface-container-low transition-colors"><div class="flex items-center gap-space-sm min-w-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSbk9pdn8eUoBAbMFJCg3sw4AdzMYr6eruFfJvN3uZb3iPTWfmG2I7sChix6nruXT-D2wsKTOl2JKCBTrxgIbSCZoHIjhGcyzDJ2iuNE27hGQQNLkq9DaIVlu_R1GUboD99D9md3rie4gg8aJwAusIj809CeJbTB7cLMwv3DZMTXdToNdl917aOegEORzX7k2wGJvi8MgTorJ7rJ38jGwjDmZ3AK7pr_f9U6wQEUA"/><div class="truncate"><div class="font-body-sm text-body-sm text-on-surface font-semibold truncate leading-none">Elena Vance</div><div class="font-label-sm text-label-sm text-on-surface-variant truncate mt-0.5">elena@acme.io</div></div></div><button class="text-outline hover:text-on-surface p-1 rounded" type="button"><span class="material-symbols-outlined text-[20px]">more_vert</span></button></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md flex-1 max-w-lg"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full pl-9 pr-14 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm shadow-[0_1px_3px_0_rgba(15,23,42,0.04)] focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Quick search documents, chats, citations..." type="text"/><kbd class="absolute right-2.5 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-1.5 text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm px-2 py-1.5 rounded-lg hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">help</span><span>Help &amp; Docs</span></button><button class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary"></span></button><div class="h-4 w-px bg-outline-variant"></div><button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-body-sm text-body-sm font-semibold" type="button"><span class="material-symbols-outlined text-[18px]">upload_file</span><span>Upload</span></button><button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-colors font-body-sm text-body-sm font-semibold" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>New Chat</span></button></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full h-[calc(100vh-64px)] overflow-hidden">
+<!-- Top Context Header / Control Rail -->
+<div class="flex-none bg-surface-container-lowest px-space-xl py-space-sm shadow-sm flex items-center justify-between gap-space-md z-20">
+<div class="flex items-center gap-space-md min-w-0">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant flex-shrink-0">
+<span class="hover:text-on-surface cursor-pointer">Workspaces</span>
+<span class="text-outline">/</span>
+<span class="hover:text-on-surface cursor-pointer">Acme Corp Labs</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface font-semibold">AI Chat</span>
+</nav>
+<div class="h-4 w-px bg-surface-container-highest flex-shrink-0"></div>
+<!-- Editable Session Title -->
+<div class="flex items-center gap-space-xs group cursor-pointer min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">SOC2 &amp; Security Compliance Analysis</span>
+<button class="p-1 rounded text-outline group-hover:text-primary transition-colors flex-shrink-0" title="Rename session" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+<!-- Latency & Model Pill -->
+<div class="hidden lg:flex items-center gap-2 px-2.5 py-1 rounded-full bg-surface-container-low flex-shrink-0">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Claude 3.5 Sonnet + RAG v2</span>
+</div>
+<span class="font-code-sm text-code-sm text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded">210ms</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span class="hidden sm:inline">Share</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span class="hidden sm:inline">Export</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-body-sm text-body-sm font-semibold transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span class="hidden md:inline">New Session</span>
+</button>
+</div>
+</div>
+<!-- 3-Column Core Flex Workspace -->
+<div class="flex-1 flex overflow-hidden min-h-0">
+<!-- 1. LEFT PANEL: Target Documents & Recent Sessions -->
+<aside class="w-[280px] flex-none bg-surface-container-lowest flex flex-col justify-between shadow-[inset_-1px_0_0_rgba(15,23,42,0.06)] min-h-0">
+<!-- Top Target Documents Section -->
+<div class="flex-1 flex flex-col p-space-md min-h-0">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Target Docs</span>
+<span class="px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold">2 active</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="font-label-sm text-label-sm text-primary hover:underline" type="button">All</button>
+<span class="text-outline text-label-sm">·</span>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" type="button">Clear</button>
+</div>
+</div>
+<!-- Filter Input -->
+<div class="relative mb-space-sm">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px]">filter_list</span>
+<input class="w-full pl-8 pr-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary shadow-inner" placeholder="Filter documents..." type="text"/>
+</div>
+<!-- Document List with Selection -->
+<div class="flex-1 overflow-y-auto space-y-1 pr-1">
+<!-- Active Doc 1 -->
+<div class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer group">
+<div class="flex items-start gap-2">
+<input checked="" class="mt-0.5 rounded accent-primary-container cursor-pointer" type="checkbox"/>
+<div class="min-w-0 flex-1">
+<p class="font-label-md text-label-md font-semibold text-primary truncate leading-tight">SOC2_Compliance_Audit_2024.docx</p>
+<div class="flex items-center gap-2 mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>118 pages</span>
+<span>•</span>
+<span class="text-on-tertiary-fixed-variant font-medium">412 chunks</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Doc 2 -->
+<div class="p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer group">
+<div class="flex items-start gap-2">
+<input checked="" class="mt-0.5 rounded accent-primary-container cursor-pointer" type="checkbox"/>
+<div class="min-w-0 flex-1">
+<p class="font-label-md text-label-md font-semibold text-primary truncate leading-tight">Vendor_MSA_Master_Agreement.pdf</p>
+<div class="flex items-center gap-2 mt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>84 pages</span>
+<span>•</span>
+<span>260 chunks</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Inactive Doc 3 -->
+<div class="p-2 rounded-lg hover:bg-surface-container-low transition-all cursor-pointer group">
+<div class="flex items-start gap-2">
+<input class="mt-0.5 rounded accent-primary-container cursor-pointer" type="checkbox"/>
+<div class="min-w-0 flex-1">
+<p class="font-label-md text-label-md text-on-surface group-hover:text-primary truncate leading-tight">Q3_Financial_Forecast_v2.pdf</p>
+<div class="flex items-center gap-2 mt-1 text-outline font-label-sm text-label-sm">
+<span>42 pages</span>
+<span>•</span>
+<span>120 chunks</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Inactive Doc 4 -->
+<div class="p-2 rounded-lg hover:bg-surface-container-low transition-all cursor-pointer group">
+<div class="flex items-start gap-2">
+<input class="mt-0.5 rounded accent-primary-container cursor-pointer" type="checkbox"/>
+<div class="min-w-0 flex-1">
+<p class="font-label-md text-label-md text-on-surface group-hover:text-primary truncate leading-tight">Annual_Employee_Handbook_2024.pdf</p>
+<div class="flex items-center gap-2 mt-1 text-outline font-label-sm text-label-sm">
+<span>64 pages</span>
+<span>•</span>
+<span>198 chunks</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Inactive Doc 5 -->
+<div class="p-2 rounded-lg hover:bg-surface-container-low transition-all cursor-pointer group">
+<div class="flex items-start gap-2">
+<input class="mt-0.5 rounded accent-primary-container cursor-pointer" type="checkbox"/>
+<div class="min-w-0 flex-1">
+<p class="font-label-md text-label-md text-on-surface group-hover:text-primary truncate leading-tight">Product_Requirements_Doc_RAG.txt</p>
+<div class="flex items-center gap-2 mt-1 text-outline font-label-sm text-label-sm">
+<span>12 pages</span>
+<span>•</span>
+<span>48 chunks</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Recent Sessions Section -->
+<div class="p-space-md bg-surface-container-low shadow-[inset_0_1px_0_rgba(15,23,42,0.06)] flex flex-col gap-space-xs">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-outline">Recent Sessions</span>
+<span class="material-symbols-outlined text-outline text-[16px]">history</span>
+</div>
+<div class="space-y-1">
+<div class="p-2 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-between cursor-pointer">
+<div class="min-w-0 flex-1">
+<p class="font-label-md text-label-md font-semibold text-on-surface truncate">SOC2 &amp; Security Compliance</p>
+<p class="font-label-sm text-label-sm text-primary">Active now</p>
+</div>
+<span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+</div>
+<div class="p-2 rounded-lg hover:bg-surface-container-lowest transition-colors flex items-center justify-between cursor-pointer group">
+<div class="min-w-0 flex-1">
+<p class="font-label-md text-label-md text-on-surface group-hover:text-primary truncate">Q3 EBITDA &amp; Growth Drivers</p>
+<p class="font-label-sm text-label-sm text-outline">Yesterday</p>
+</div>
+</div>
+<div class="p-2 rounded-lg hover:bg-surface-container-lowest transition-colors flex items-center justify-between cursor-pointer group">
+<div class="min-w-0 flex-1">
+<p class="font-label-md text-label-md text-on-surface group-hover:text-primary truncate">Vendor Indemnity Clauses</p>
+<p class="font-label-sm text-label-sm text-outline">3 days ago</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- 2. CENTER PANEL: Document Viewer & Citation Canvas -->
+<main class="flex-1 flex flex-col bg-surface-container-low shadow-[inset_-1px_0_0_rgba(15,23,42,0.06)] min-h-0 overflow-hidden">
+<!-- Document Controls Header -->
+<div class="h-12 bg-surface-container-lowest px-space-lg flex items-center justify-between flex-none shadow-sm z-10">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px]">description</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">SOC2_Compliance_Audit_2024.docx</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-medium">Page 42 / 118</span>
+</div>
+<div class="flex items-center gap-1.5">
+<!-- Page Jump -->
+<div class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container-low text-on-surface">
+<span class="font-label-sm text-label-sm text-outline">Page</span>
+<input class="w-8 text-center bg-surface-container-lowest rounded font-code-sm text-code-sm text-on-surface font-semibold focus:outline-none focus:ring-1 focus:ring-primary" type="text" value="42"/>
+<span class="font-label-sm text-label-sm text-outline">/ 118</span>
+</div>
+<!-- Citation Synchronizer -->
+<button class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed-variant hover:bg-primary-container hover:text-on-primary transition-all font-label-sm text-label-sm font-semibold" type="button">
+<span class="material-symbols-outlined text-[16px] animate-pulse">my_location</span>
+<span>Jump to Citation #1</span>
+</button>
+<div class="h-4 w-px bg-surface-container-high mx-1"></div>
+<!-- Zoom & Display Controls -->
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container transition-colors" title="Zoom out" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="font-label-sm text-label-sm font-semibold px-1 text-on-surface">100%</span>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container transition-colors" title="Zoom in" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container transition-colors" title="Fit to width" type="button">
+<span class="material-symbols-outlined text-[18px]">fit_screen</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:bg-surface-container transition-colors" title="Download Source" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+</button>
+</div>
+</div>
+<!-- Viewer Paper Workspace with Ambient Scroll -->
+<div class="flex-1 overflow-y-auto p-space-xl flex justify-center">
+<!-- Document Page Canvas -->
+<article class="w-full max-w-3xl bg-surface-container-lowest p-12 rounded-xl shadow-lg relative min-h-[960px] flex flex-col justify-between">
+<!-- Document Watermark / Top Header -->
+<div>
+<div class="flex items-center justify-between pb-6 mb-8 shadow-[inset_0_-1px_0_rgba(15,23,42,0.06)] font-code-sm text-code-sm text-outline uppercase tracking-wider">
+<span>ACME CORP • CONFIDENTIAL SOC2 TYPE II EVALUATION</span>
+<span>ANNEX B - CONTROL ASSESSMENT</span>
+</div>
+<!-- Header Content -->
+<div class="space-y-4">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wide">Technical Controls • CC6.1 &amp; CC6.3</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">SECTION 4: DATA ENCRYPTION &amp; KEY MANAGEMENT</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Independent testing of the production cryptographic baseline was conducted between June 12 and August 30, 2024. The operational envelope assesses data pipelines across storage, database engines, and inter-service container orchestration.
+              </p>
+</div>
+<!-- Active Highlighting Area (Citation Match 1) -->
+<div class="my-6 p-4 rounded-xl bg-primary-fixed/20 shadow-sm relative">
+<div class="absolute -left-3 top-4 w-1.5 h-12 bg-primary rounded-full"></div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+                  Active AI Citation #1
+                </span>
+<span class="font-label-sm text-label-sm text-on-tertiary-fixed-variant font-semibold">94% Semantic Match</span>
+</div>
+<mark class="bg-primary-fixed text-on-primary-fixed font-body-lg text-body-lg font-medium px-1.5 py-0.5 rounded leading-relaxed inline">
+                "All customer data at rest is encrypted using AES-256 with keys managed in AWS KMS. Key rotation occurs automatically every 90 days. Backups are geo-replicated to us-east-1 and us-west-2 with TLS 1.3 in-transit enforcement."
+              </mark>
+<div class="mt-3 flex items-center gap-4 text-outline font-label-sm text-label-sm">
+<span>Matched chunk ID: <code>#sec-kms-142</code></span>
+<span>•</span>
+<span>Audited: AWS KMS Key ARN <code>arn:aws:kms:us-east-1:***</code></span>
+</div>
+</div>
+<!-- Realistic Supplementary Content -->
+<div class="space-y-4 text-on-surface-variant font-body-md text-body-md leading-relaxed">
+<h3 class="font-headline-sm text-headline-sm text-on-surface pt-2">4.1 Key Custodianship &amp; Hardware Security Modules</h3>
+<p>
+                Access to the root Key Management Service configuration is restricted strictly through hardware-backed Multi-Factor Authentication (FIPS 140-2 Level 3 HSM). Privileged actions require dual-custody administrative approval documented in the SOC2 change ledger.
+              </p>
+<p>
+                Quarterly simulated disaster failover verifies that encrypted volumes automatically mount in standby clusters within secondary availability zones without manual key injection.
+              </p>
+<!-- Mini SVG Security Checklist Grid -->
+<div class="grid grid-cols-2 gap-3 pt-3">
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">verified_user</span>
+<div>
+<h4 class="font-label-md text-label-md font-semibold text-on-surface">AES-256 GCM Verification</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Validated on RDS Aurora PostgreSQL and S3 Standard buckets.</p>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">sync</span>
+<div>
+<h4 class="font-label-md text-label-md font-semibold text-on-surface">Automated Rotation Engine</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Active cron daemon configured for 90-day cryptographic cycle.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Document Footer -->
+<div class="pt-6 mt-12 shadow-[inset_0_1px_0_rgba(15,23,42,0.06)] flex items-center justify-between text-outline font-code-sm text-code-sm">
+<span>Page 42 of 118</span>
+<span>SOC2-TYPE-2-REPORT-FINAL-2024.DOCX</span>
+</div>
+<!-- Floating Inspector Badge -->
+<div class="absolute bottom-6 right-6 px-3 py-1.5 rounded-full bg-surface-container-highest/90 backdrop-blur text-on-surface font-label-sm text-label-sm shadow-md flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+<span>Indexed Chunks: 412 • Embedding Model: text-embedding-3-large</span>
+</div>
+</article>
+</div>
+</main>
+<!-- 3. RIGHT PANEL: AI Conversational Intelligence Stream -->
+<section class="w-[460px] flex-none bg-surface-container-lowest flex flex-col justify-between min-h-0">
+<!-- Chat Header -->
+<div class="h-12 px-space-md bg-surface-container-lowest shadow-sm flex items-center justify-between flex-none z-10">
+<div class="flex items-center gap-space-sm">
+<div class="w-6 h-6 rounded-md bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md font-semibold text-on-surface leading-none">DocuMind Assistant</h3>
+<p class="font-label-sm text-label-sm text-outline mt-0.5">Connected to 2 documents (182k tokens)</p>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded text-outline hover:text-on-surface transition-colors" title="Clear thread" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+</button>
+<button class="p-1 rounded text-outline hover:text-on-surface transition-colors" title="More options" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Message History Stream -->
+<div class="flex-1 overflow-y-auto p-space-md space-y-space-md">
+<!-- User Query -->
+<div class="flex flex-col items-end gap-1.5 pl-8">
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm">
+<span class="font-semibold text-on-surface">Elena Vance</span>
+<span>10:42 AM</span>
+</div>
+<div class="p-3.5 rounded-2xl rounded-tr-sm bg-primary-container text-on-primary font-body-md text-body-md shadow-sm">
+            What encryption standards are enforced for customer data at rest, and how frequently are keys rotated according to the audit?
+          </div>
+</div>
+<!-- AI Assistant Response Container -->
+<div class="flex flex-col items-start gap-2 pr-2">
+<!-- Identity Meta -->
+<div class="flex items-center gap-2 text-outline font-label-sm text-label-sm">
+<div class="w-5 h-5 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[13px]">auto_awesome</span>
+</div>
+<span class="font-semibold text-on-surface">DocuMind AI</span>
+<span>Claude 3.5 Sonnet</span>
+</div>
+<!-- Answer Body -->
+<div class="p-4 rounded-2xl rounded-tl-sm bg-surface-container-low text-on-surface font-body-md text-body-md space-y-3 shadow-sm">
+<p class="leading-relaxed">
+              Based on the <strong class="text-primary font-semibold">SOC2 Compliance Audit 2024</strong>, here are the documented encryption and key management standards:
+            </p>
+<ul class="space-y-2 pl-2">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 flex-shrink-0">check_circle</span>
+<span><strong class="text-on-surface font-semibold">Data at Rest Encryption:</strong> All customer data stored at rest is encrypted using <span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-code-sm text-code-sm text-primary font-bold">AES-256</span> across all primary databases and storage volumes.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 flex-shrink-0">check_circle</span>
+<span><strong class="text-on-surface font-semibold">Key Management &amp; Rotation:</strong> Cryptographic keys are managed within <strong class="text-on-surface">AWS KMS</strong>. Automatic rotation is strictly enforced on a <span class="px-1.5 py-0.5 rounded bg-surface-container-highest font-code-sm text-code-sm text-primary font-bold">90-day mandatory schedule</span>.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 flex-shrink-0">check_circle</span>
+<span><strong class="text-on-surface font-semibold">In-Transit Protection:</strong> All external calls and internal microservices communication enforce <strong class="text-on-surface">TLS 1.3</strong> protocols.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 flex-shrink-0">check_circle</span>
+<span><strong class="text-on-surface font-semibold">Geo-Replication:</strong> Backups are encrypted before geo-replication between <code class="bg-surface-container-highest text-on-surface px-1 py-0.5 rounded font-code-sm text-code-sm">us-east-1</code> and <code class="bg-surface-container-highest text-on-surface px-1 py-0.5 rounded font-code-sm text-code-sm">us-west-2</code>.</span>
+</li>
+</ul>
+<!-- Inline Verification Badge -->
+<div class="pt-2 flex items-center justify-between shadow-[inset_0_1px_0_rgba(15,23,42,0.06)] text-outline font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 text-on-tertiary-fixed-variant font-medium">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Verified against 2 document citations in 0.84s</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 hover:text-on-surface transition-colors" title="Copy answer" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+<button class="p-1 hover:text-on-surface transition-colors" title="Helpful" type="button">
+<span class="material-symbols-outlined text-[16px]">thumb_up</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Citations Subsection Cards -->
+<div class="w-full space-y-2 mt-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold pl-1">Referenced Citations</span>
+<!-- Citation #1 Card (Active Jump Target) -->
+<div class="p-3 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-pointer ring-1 ring-primary/40 group">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="px-1.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold flex-shrink-0">#1</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">SOC2_Compliance_Audit_2024.docx</span>
+<span class="font-label-sm text-label-sm text-outline flex-shrink-0">Page 42</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm font-bold text-primary">94% match</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic line-clamp-2 pl-2 shadow-[inset_2px_0_0_#4f46e5]">
+                "All customer data at rest is encrypted using AES-256 with keys managed in AWS KMS. Key rotation occurs automatically every 90 days..."
+              </p>
+<div class="mt-2 flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+                  Viewing in center canvas
+                </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[16px] transition-colors">arrow_forward</span>
+</div>
+</div>
+<!-- Citation #2 Card -->
+<div class="p-3 rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all cursor-pointer group">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold flex-shrink-0">#2</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface truncate">SOC2_Compliance_Audit_2024.docx</span>
+<span class="font-label-sm text-label-sm text-outline flex-shrink-0">Page 45</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm font-semibold text-on-surface-variant">88% match</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic line-clamp-2 pl-2 shadow-[inset_2px_0_0_#c7c4d8]">
+                "Backup archives in secondary regions adhere to identical AES-256 envelope encryption policy with automated TLS verification..."
+              </p>
+<div class="mt-2 flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline group-hover:text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                  Jump to Page 45
+                </span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[16px] transition-colors">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Action Pill Prompts -->
+<div class="px-space-md py-1.5 flex items-center gap-1.5 overflow-x-auto shadow-[inset_0_1px_0_rgba(15,23,42,0.04)] bg-surface-container-low flex-none">
+<span class="font-label-sm text-label-sm text-outline font-medium flex-shrink-0">Suggestions:</span>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm whitespace-nowrap transition-colors shadow-xs" type="button">
+          Compare with MSA terms
+        </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm whitespace-nowrap transition-colors shadow-xs" type="button">
+          Draft compliance summary
+        </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm whitespace-nowrap transition-colors shadow-xs" type="button">
+          Show key custodians
+        </button>
+</div>
+<!-- Fixed Chat Input Area -->
+<div class="p-space-md bg-surface-container-lowest shadow-[0_-2px_10px_rgba(15,23,42,0.04)] flex-none">
+<div class="p-2.5 rounded-xl bg-surface-container-low focus-within:bg-surface-container-lowest focus-within:ring-2 focus-within:ring-primary/20 transition-all shadow-inner">
+<textarea class="w-full bg-transparent text-on-surface placeholder:text-outline font-body-sm text-body-sm resize-none focus:outline-none" placeholder="Ask a follow-up question or cite another section... (Enter ↵ to send)" rows="2"></textarea>
+<div class="mt-2 flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" title="Attach document" type="button">
+<span class="material-symbols-outlined text-[18px]">attach_file</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" title="Prompt templates" type="button">
+<span class="material-symbols-outlined text-[18px]">auto_stories</span>
+</button>
+<button class="p-1.5 rounded-lg hover:bg-surface-container hover:text-on-surface transition-colors" title="Search web sources" type="button">
+<span class="material-symbols-outlined text-[18px]">language</span>
+</button>
+<div class="h-4 w-px bg-surface-container-high mx-1"></div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span>RAG Active</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg bg-primary-container text-on-primary hover:bg-primary flex items-center justify-center transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div></main></div></body></html>
