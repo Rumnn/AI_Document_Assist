@@ -11,9 +11,11 @@ import {
   Upload,
   Plus,
   Command,
+  Menu,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useUIStore } from "@/lib/stores/ui-store";
 
 interface HeaderProps {
   className?: string;
@@ -22,6 +24,7 @@ interface HeaderProps {
 
 export function Header({ className, onUploadClick }: HeaderProps) {
   const router = useRouter();
+  const { toggleSidebarMobile } = useUIStore();
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -33,12 +36,20 @@ export function Header({ className, onUploadClick }: HeaderProps) {
   return (
     <header
       className={cn(
-        "fixed top-0 left-[260px] right-0 z-40 flex h-16 items-center justify-between bg-surface/80 px-6 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.02)]",
+        "fixed top-0 left-0 lg:left-[260px] right-0 z-40 flex h-16 items-center justify-between bg-surface/80 px-4 sm:px-6 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.02)]",
         className
       )}
     >
-      {/* Quick Search */}
-      <div className="flex flex-1 items-center max-w-md">
+      {/* Mobile Menu & Quick Search */}
+      <div className="flex flex-1 items-center gap-2.5 max-w-md">
+        <button
+          type="button"
+          onClick={toggleSidebarMobile}
+          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-outline-variant/40 bg-surface-container-lowest text-on-surface-variant hover:text-on-surface hover:bg-surface-container lg:hidden transition-colors"
+          aria-label="Open sidebar menu"
+        >
+          <Menu className="h-5 w-5" />
+        </button>
         <div className="relative w-full">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-outline" />
           <input

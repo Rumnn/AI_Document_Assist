@@ -61,7 +61,7 @@ class UserResponse(BaseModel):
     full_name: str
     avatar_url: str | None = None
     is_active: bool = True
-    created_at: datetime
-    updated_at: datetime
+    created_at: datetime | None = None
+    updated_at: datetime | None = None
 
     model_config = {"from_attributes": True}

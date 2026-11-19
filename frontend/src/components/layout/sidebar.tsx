@@ -17,11 +17,13 @@ import {
   MoreVertical,
   LogOut,
   FolderOpen,
+  X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Progress } from "@/components/ui/progress";
 import { MOCK_USER, MOCK_WORKSPACES } from "@/lib/mock/data";
+import { useUIStore } from "@/lib/stores/ui-store";
 
 interface SidebarProps {
   className?: string;
@@ -31,6 +33,7 @@ interface SidebarProps {
 
 export function Sidebar({ className }: SidebarProps) {
   const pathname = usePathname();
+  const { sidebarMobileOpen, setSidebarMobileOpen } = useUIStore();
   const [activeWorkspace] = useState(MOCK_WORKSPACES[0]);
   const user = MOCK_USER;
 
@@ -101,30 +104,51 @@ export function Sidebar({ className }: SidebarProps) {
   ];
 
   return (
-    <aside
-      className={cn(
-        "fixed left-0 top-0 z-50 flex h-full w-[260px] flex-col justify-between bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-r border-outline-variant/40 select-none",
-        className
+    <>
+      {/* Mobile backdrop */}
+      {sidebarMobileOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-black/40 backdrop-blur-xs lg:hidden transition-opacity"
+          onClick={() => setSidebarMobileOpen(false)}
+        />
       )}
-    >
-      {/* Top Section */}
-      <div className="flex flex-1 flex-col min-h-0">
-        {/* Brand / Logo */}
-        <div className="flex h-16 items-center px-4">
-          <Link href={"/dashboard" as Route} className="flex items-center gap-2.5 min-w-0 group">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-on-primary shadow-sm group-hover:scale-105 transition-transform">
-              <Sparkles className="h-4.5 w-4.5" />
-            </div>
-            <div className="flex items-center gap-1.5 truncate">
-              <span className="text-base font-semibold text-on-surface tracking-tight">
-                DocuMind
-              </span>
-              <span className="rounded bg-primary-fixed px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-on-primary-fixed-variant">
-                PRO
-              </span>
-            </div>
-          </Link>
-        </div>
+      <aside
+        className={cn(
+          "fixed left-0 top-0 z-50 flex h-full w-[260px] flex-col justify-between bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-r border-outline-variant/40 select-none transition-transform duration-300 ease-in-out",
+          sidebarMobileOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0",
+          className
+        )}
+      >
+        {/* Top Section */}
+        <div className="flex flex-1 flex-col min-h-0">
+          {/* Brand / Logo */}
+          <div className="flex h-16 items-center justify-between px-4">
+            <Link
+              href={"/dashboard" as Route}
+              onClick={() => setSidebarMobileOpen(false)}
+              className="flex items-center gap-2.5 min-w-0 group"
+            >
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-on-primary shadow-sm group-hover:scale-105 transition-transform">
+                <Sparkles className="h-4.5 w-4.5" />
+              </div>
+              <div className="flex items-center gap-1.5 truncate">
+                <span className="text-base font-semibold text-on-surface tracking-tight">
+                  DocuMind
+                </span>
+                <span className="rounded bg-primary-fixed px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-on-primary-fixed-variant">
+                  PRO
+                </span>
+              </div>
+            </Link>
+            <button
+              type="button"
+              onClick={() => setSidebarMobileOpen(false)}
+              className="flex h-8 w-8 items-center justify-center rounded-lg text-outline hover:text-on-surface hover:bg-surface-container lg:hidden transition-colors"
+              aria-label="Close sidebar"
+            >
+              <X className="h-5 w-5" />
+            </button>
+          </div>
 
         {/* Workspace Switcher */}
         <div className="px-3 py-1">
@@ -157,6 +181,7 @@ export function Sidebar({ className }: SidebarProps) {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={() => setSidebarMobileOpen(false)}
                 className={cn(
                   "flex items-center justify-between rounded-lg px-3 py-2 text-sm transition-all",
                   item.active
@@ -198,6 +223,7 @@ export function Sidebar({ className }: SidebarProps) {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={() => setSidebarMobileOpen(false)}
                 className={cn(
                   "flex items-center justify-between rounded-lg px-3 py-2 text-sm transition-all",
                   item.active
@@ -265,5 +291,6 @@ export function Sidebar({ className }: SidebarProps) {
         </div>
       </div>
     </aside>
+    </>
   );
 }

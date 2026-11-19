@@ -13,7 +13,7 @@ export function DashboardShell({ children }: DashboardShellProps) {
     <div className="min-h-screen bg-surface text-on-surface">
       <Sidebar />
       <Header />
-      <main className="pl-[260px] pt-16 min-h-screen w-full transition-all">
+      <main className="pl-0 lg:pl-[260px] pt-16 min-h-screen w-full transition-all">
         {children}
       </main>
     </div>
